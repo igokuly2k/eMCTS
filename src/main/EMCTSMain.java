@@ -1,3 +1,4 @@
+package main;
 import javax.swing.*;
 import gui.MainLayout;
 public class EMCTSMain 
