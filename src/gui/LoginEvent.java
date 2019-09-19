@@ -21,13 +21,7 @@ public class LoginEvent extends EventObject
 		public int getCustomerID() {
 			return customer_id;
 		}
-		public void setCustomerID(int customer_id) {
-			this.customer_id = customer_id;
-		}
 		public int getPIN() {
 			return PIN;
-		}
-		public void setPIN(int PIN) {
-			this.PIN = PIN;
 		}
 }

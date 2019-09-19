@@ -29,16 +29,16 @@ public class CreateConnection
 	    c = DriverManager.getConnection(CONNECTION,p);
 	    Statement stmt=c.createStatement();
 	    DatabaseMetaData dbm = c.getMetaData();
-	    ResultSet tables = dbm.getTables(null, null, "passengerhistory", null);
+	    ResultSet tables = dbm.getTables(null, null, "passenger", null);
 	    if(!(tables.next()))
 	    {
-	 	  String sql="CREATE TABLE passenger(customer_id INT NOT NULL,aadhar_no INT NOT NULL,blood_group VARCHAR(2) NOT NULL,PIN CHAR(32) NOT NULL,PRIMARY KEY(customer_id))";
+	 	  String sql="CREATE TABLE passenger(customer_id INT NOT NULL AUTO_INCREMENT,aadhar_no BIGINT NOT NULL UNIQUE,blood_group VARCHAR(3) NOT NULL,PIN CHAR(32) NOT NULL,INDEX `idx_md5` (PIN),PRIMARY KEY(customer_id));";
 	 	  stmt.executeUpdate(sql);
 	    }
 	    tables = dbm.getTables(null, null, "passengerhistory", null);
 	    if(!(tables.next()))
 	    {
-	 	  String sql="CREATE TABLE passengerhistory(customer_id INT NOT NULL,fromplace VARCHAR(40),toplace VARCHAR(40),printdate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,PRIMARY KEY(customer_id))";
+	 	  String sql="CREATE TABLE passengerhistory(id INT NOT NULL AUTO_INCREMENT,customer_id INT NOT NULL,fromplace VARCHAR(40),toplace VARCHAR(40),printdate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,PRIMARY KEY(id));";
 	 	  stmt.executeUpdate(sql);
 	    }
 	 	}
