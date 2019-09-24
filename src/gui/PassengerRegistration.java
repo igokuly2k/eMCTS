@@ -41,8 +41,8 @@ public class PassengerRegistration extends JPanel{
  aadharIDLabel=new JLabel("AADHAR ID :");
  bloodgroupLabel=new JLabel("Blood Group  :");
  PINLabel=new JLabel("4 DIGIT PIN  :");
- aadharIDField=new JTextField(40);
- PINField=new JPasswordField(40);
+ aadharIDField=new JTextField(14);
+ PINField=new JPasswordField(6);
  okBtn=new JButton("SUBMIT");
  showMessage=new JLabel("");
  okBtn.addActionListener(new ActionListener() 

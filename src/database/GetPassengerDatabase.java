@@ -17,7 +17,7 @@ public class GetPassengerDatabase
 	Connection c;
 	public GetPassengerDatabase() throws SQLException,ClassNotFoundException
 	{
-		CreateConnection conn=new CreateConnection("root","ibmxuse1A#@");
+		CreateConnection conn=new CreateConnection("root","root");
 		c=conn.returnConnection();
 		stmt=c.createStatement();
 		stmt1=c.createStatement();	

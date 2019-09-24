@@ -1,5 +1,4 @@
 package database;
-
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
@@ -7,10 +6,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
-
 public class CreateConnection 
 {
-	  private static final String dbClassName = "com.mysql.cj.jdbc.Driver";
+	  private static final String dbClassName = "com.mysql.jdbc.Driver";
 
 
 	  private static final String CONNECTION =
