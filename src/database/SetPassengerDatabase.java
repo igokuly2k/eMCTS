@@ -9,7 +9,7 @@ public class SetPassengerDatabase {
 	Statement stmt;
 	public SetPassengerDatabase() throws SQLException,ClassNotFoundException
 	{
-		CreateConnection conn=new CreateConnection("root","root");
+		CreateConnection conn=new CreateConnection("igokulsmailbox","bca6c1aa");
 		Connection c=conn.returnConnection();
 		stmt=c.createStatement();	
 	}

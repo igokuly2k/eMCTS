@@ -12,7 +12,7 @@ public class CreateConnection
 
 
 	  private static final String CONNECTION =
-	                          "jdbc:mysql://127.0.0.1/emcts";
+	                          "jdbc:mysql://db4free.net:3306/electronicmcts";
 	  
 	  private Connection c;
 	  public CreateConnection(String user,String password) throws SQLException,ClassNotFoundException
